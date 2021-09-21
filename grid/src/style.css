@@ -172,9 +172,6 @@ a[tabindex]:focus {
   transition: all 0.3s ease-in;
 }
 
-.spine-container:hover {
-}
-
 .text-01 {
   font-size: 24px;
   color: #c4c4c4;
@@ -539,7 +536,7 @@ section {
 }
 
 .section-02 {
-  background: ##1a1a1a;
+  background: #1a1a1a;
   transition: all 1s;
   position: relative;
 }
