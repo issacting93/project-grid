@@ -1,43 +1,32 @@
+
+<script>
+	import ScifiMod01 from './scifiMod01.svelte';
+ 
+</script>
 <section class="">
     <ul class="health-container">
       <li class="li-container">
-        <svg width="51" height="13" viewBox="0 0 51 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4213 0.124512H50.2473L35.1492 12.9522H0.323242L15.4213 0.124512Z" fill="#FD8235" />
-        </svg>
+    <div> <ScifiMod01 /> </div>   
       </li>
   <li class="li-container">
-        <svg width="51" height="13" viewBox="0 0 51 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4213 0.124512H50.2473L35.1492 12.9522H0.323242L15.4213 0.124512Z" fill="#FD8235" />
-        </svg>
+    <div> <ScifiMod01 /> </div>   
       </li>
       <li class="li-container">
-        <svg width="51" height="13" viewBox="0 0 51 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4213 0.124512H50.2473L35.1492 12.9522H0.323242L15.4213 0.124512Z" fill="#FD8235" />
-        </svg>
+        <div> <ScifiMod01 /> </div>   
       </li>
       <li class="li-container">
-        <svg width="51" height="13" viewBox="0 0 51 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4213 0.124512H50.2473L35.1492 12.9522H0.323242L15.4213 0.124512Z" fill="#FD8235" />
-        </svg>
+        <div> <ScifiMod01 /> </div>   
       </li>
       <li class="li-container">
-        <svg width="51" height="13" viewBox="0 0 51 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4213 0.124512H50.2473L35.1492 12.9522H0.323242L15.4213 0.124512Z" fill="#FD8235" />
-        </svg>
+        <div> <ScifiMod01 /> </div>   
       </li><li class="li-container">
-        <svg width="51" height="13" viewBox="0 0 51 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4213 0.124512H50.2473L35.1492 12.9522H0.323242L15.4213 0.124512Z" fill="#FD8235" />
-        </svg>
+        <div> <ScifiMod01 /> </div>   
       </li>
       <li class="li-container">
-        <svg width="51" height="13" viewBox="0 0 51 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4213 0.124512H50.2473L35.1492 12.9522H0.323242L15.4213 0.124512Z" fill="#FD8235" />
-        </svg>
+        <div> <ScifiMod01 /> </div>   
       </li>
          <li class="li-container">
-        <svg width="51" height="13" viewBox="0 0 51 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.4213 0.124512H50.2473L35.1492 12.9522H0.323242L15.4213 0.124512Z" fill="#FD8235" />
-        </svg>
+            <div> <ScifiMod01 /> </div>   
       </li>
     </ul>
   </section> 
@@ -59,12 +48,12 @@
 }
 
 
-.health-container li svg {
+.health-container li div {
   transition: all 0.1s ease-out;
   
  
 }
-.health-container:hover li svg {
+.health-container:hover li div {
   transform:   rotate3d(0, -1, 0,  35deg) scale(0.6);
   transition: all 0.2s ease-in;
   transform-origin: 0 0;
@@ -72,7 +61,7 @@
  box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.2);
   transform: matrix(-0.84, 0.66, 0.47, 0.82, 0, 0);
 }
-.health-container:active li svg {
+.health-container:active li div {
   transform:   rotate3d(0, -1, 0,  135deg);
   transition: all 0.2s ease-in;
   transform-origin: 0 0;
@@ -80,7 +69,7 @@
  box-shadow: 0px 15px 7px rgba(0, 0, 0, 0.2);
   transform: matrix(-0.84, 0.66, 0.47, 0.82, 0, 0);
 }
-.li-container svg {
+.li-container div {
     float: right;
   transition: all 0.1s ease-out;
 }
@@ -128,77 +117,77 @@ li:nth-child(9) {
 }
 
 
-.health-container:hover li:nth-child(1)  svg {
+.health-container:hover li:nth-child(1)  div {
   transition-delay: 0s;
   
 }
-.health-container:hover li:nth-child(2)  svg {
+.health-container:hover li:nth-child(2)  div {
   transition-delay: 0.05s;
  
 }
-.health-container:hover li:nth-child(3)  svg {
+.health-container:hover li:nth-child(3)  div {
   transition-delay: 0.1s;
    
 }
-.health-container:hover li:nth-child(4)  svg {
+.health-container:hover li:nth-child(4)  div {
   transition-delay: 0.15s;
   
 }
-.health-container:hover li:nth-child(5)  svg  {
+.health-container:hover li:nth-child(5)  div  {
   transition-delay: 0.2s;
   
 }
-.health-container:hover li:nth-child(6)  svg  {
+.health-container:hover li:nth-child(6)  div  {
   transition-delay: 0.25s;
    
 }
-.health-container:hover li:nth-child(7)  svg {
+.health-container:hover li:nth-child(7)  div {
   transition-delay: 0.3s;
      
 }
-.health-container:hover li:nth-child(8)  svg {
+.health-container:hover li:nth-child(8)  div {
   transition-delay: 0.35s;
      
 }
-.health-container:hover li:nth-child(9)  svg {
+.health-container:hover li:nth-child(9)  div {
   transition-delay: 0.4s;
  
 }
 
 
- li:nth-child(1)  svg {
+ li:nth-child(1)  div {
   transition-delay: 0s;
   
 }
- li:nth-child(2)  svg {
+ li:nth-child(2)  div {
   transition-delay: 0.05s;
  
 }
- li:nth-child(3)  svg {
+ li:nth-child(3)  div {
   transition-delay: 0.1s;
    
 }
- li:nth-child(4)  svg {
+ li:nth-child(4)  div {
   transition-delay: 0.15s;
   
 }
- li:nth-child(5)  svg  {
+ li:nth-child(5)  div  {
   transition-delay: 0.2s;
   
 }
- li:nth-child(6)  svg  {
+ li:nth-child(6)  div  {
   transition-delay: 0.25s;
    
 }
- li:nth-child(7)  svg {
+ li:nth-child(7)  div {
   transition-delay: 0.35s;
      
 }
-  li:nth-child(8)  svg {
+  li:nth-child(8)  div {
   transition-delay: 0.4s;
      
 }
-  li:nth-child(9)  svg {
+  li:nth-child(9)  div {
   transition-delay: 0.45s;
  
 }
