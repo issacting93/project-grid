@@ -4,6 +4,7 @@
 	import Section02 from './section02.svelte';
 	import RadialInterface from './RadialInterface.svelte';
 	import SpineSection from './SpineSection.svelte';
+ 
 	
 </script>
 
@@ -15,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;500;600;900&display=swap" rel="stylesheet">
 <main>
+	
 	<Menu />
 	<Section01 />
 	<RadialInterface />

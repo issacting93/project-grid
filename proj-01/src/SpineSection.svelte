@@ -1,13 +1,65 @@
 <script>
 	import SpineUnitLeft from './SpineUnitLeft.svelte';
     import SpineUnitRight from './SpineUnitRight.svelte';
-    
+    import ScifiFrame from './scifiFrame.svelte';
    
 
+/**
+ * 
+// Get the container element
+var spinebtnContainer = document.getElementById("spine-controller");
 
+// Get all buttons with class="btn" inside the container
+var btnSpine = spinebtnContainer.getElementsByClassName("spine-unit");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btnSpine.length; i++) {
+  btnSpine[i].addEventListener("mouseover", function () {
+    var current = document.getElementsByClassName(" active");
+    current[0].className = current[0].className.replace(" active", "");
+     this.className += " active";
+  });
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides(ele) {
+  var i;
+ 
+  //console.log('area element id = ' + id);
+
+  var imageNumber = ele.getAttribute("data-image-number");
+  //alert("The " + ele.innerHTML + " is a " + imageNumber + ".");
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  slides[imageNumber - 1].style.display = "none";
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  } 
+ 
+  slides[imageNumber - 1].style.display = "block";
+ 
+ 
+}
+*/
 </script>
 <section class="section-03" id="three">
+  
+  <div class="frame-container">  <ScifiFrame /></div>
+  <div class="text-container">
+    
+    <div class="top-left-el">
+      <div class="title"> Portfolio </div>
+      <div class="sub-title">27-21012-2421</div>
+    </div>
 
+    <div class="el-01">
+      <div class="ripple"></div>
+      <div class="connecting-01"> connecting... </div>
+    </div>
+  </div>
     <div class="slideshow-container">
   
       <div class="mySlides fade">
@@ -123,3 +175,21 @@
     </div>
     <div class="select-text"> Select Memory </div>
   </section>
+
+  <style>
+  .frame-container{
+    height:100%;
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    opacity: .6;
+}
+
+.frame-container:hover{
+  
+    opacity: .1;
+}
+  
+  </style>
