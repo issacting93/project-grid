@@ -9,5 +9,5 @@
     <line x1="230.33" y1="262.724" x2="269.928" y2="223.126" stroke="white"/>
     <circle cx="321.619" cy="164.619" r="36" transform="rotate(45 321.619 164.619)" stroke="white"/>
     <circle cx="321.619" cy="164.619" r="15" transform="rotate(45 321.619 164.619)" fill="white" stroke="white"/>
-    </svg>
+</svg>
     

@@ -4,19 +4,17 @@ html {
   }
   
   canvas {
-	  position: absolute;
-	  z-index: 11;
-	  margin: auto;
-	  width: auto;
-	  left: 0px;
-	  right: 0px;
-	  top: -50px; 
+	margin: auto;
+    width: auto;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
   }
   .hero-section {
 	margin: auto;
-	width: fit-content;
-	height: 100vh;
-	padding: 20px;
+    height: 100vh;
+    padding: 20px;
   }
   .divBlobContainer {
     Z-INDEX: 11;
@@ -30,15 +28,22 @@ html {
   .grid-container {
 	display: flex;
     flex-direction: column;
-    height:calc(100% - 80px);
-    min-width: 1200px;
+    height: calc(100% - 80px);
+     
     justify-content: space-between;
   }
   
   .grid-container > div {
-	margin: 20px;
-  }
-  
+	margin: 0px auto;
+	max-width: 1000px;
+	}
+.grid-pt-02 {
+	max-width: 1000px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom:80px;
+}
   svg.grid-pt-01 {
 	height: 150px;
 	width: 1200px;
@@ -83,12 +88,7 @@ html {
   
   .menu button {
 	 cursor: pointer;
-  }
-  .menu-container {
-	position: fixed;
-	width: 100%;
-	z-index: 10;
-  }
+  } 
   .menu button {
 	padding: 8px;
 	transition: all 0.1s ease-in;
@@ -202,7 +202,7 @@ html {
 	background: #282828;
 	font-size: 12px;
 	font-weight: 100;
-	
+	width: 120px;
 	height: 22px;
 	padding: 0px 8px;
 	line-height: 22px;
@@ -237,36 +237,6 @@ html {
 	animation: 1s ripple ease-out infinite;
 	padding: 6px;
   } 
-  .spine-container:hover .spine-controller-ul li  {
-	   
-	  transition: 0.2s;
-	  opacity:1;
-	}
-  .spine-container:hover .spine-left li,.spine-container:hover .spine-right li
-  {
-	  transform: translateY(15px) scale(0.9);
-	  transition: 0.2s;
-	  opacity:1;
-	}
-   
-  
-  .spine-unit {
-	   width: 25px;
-	height:25px;
-	  border: 1px solid var(--main-color);
-	  color: white;
-	  background: black;
-	  margin: 0px auto;
-	  text-align: center;
-	  transition: all 0.1s;
-	  z-index: 11;
-	  position: relative;
-	  cursor: pointer;
-	  transform: translateY(27px);
-  }
-  .spine-unit:hover{
-	margin-top: 46px;
-  }
    li:nth-child(1)   {
 	  transition-delay: 0.0s;
 	}
@@ -347,15 +317,13 @@ html {
 	  text-align: center;
 	  bottom: 0px;
 	  color: white;
-	  height: fit-content;
+	   
 	 -webkit-text-stroke-color: white;
 	-webkit-text-fill-color: black;
 	  -webkit-text-stroke-width: 1px;
 	font-size:140px;
 	  position: absolute;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	 
   }
   
   @keyframes ripple-02 {
@@ -501,6 +469,8 @@ html {
 	bottom: 0px;
 	padding: 20px;
 	z-index: 10;
+	background: rgba(1,1,1,0.5);
+	
   }
   .menu button {
 	padding: 8px;
@@ -539,10 +509,18 @@ html {
   .menu button:active {
 	transform: scale(0.95);
   }
+
+  .terrain-container svg {
+	opacity:.4;
+	position: absolute;
+	top:0px;
+  }
+
   
   section {
 	height: 100vh;
 	position: relative;
+	overflow: hidden;
   }
   
   .section-02 {
@@ -556,6 +534,15 @@ html {
   }
   
   
+ .spine-unit  {
+	border: 1px solid white;
+	  width: 25px;
+	  background: black;
+	  color: white;
+	  cursor: pointer;
+	  text-align: center;
+	 
+  }
   .spine-unit.active {
 	color: white;
 	background: #06eb61;
@@ -579,7 +566,7 @@ html {
   }
   
   .spine-unit:hover span {
-	color: black;
+	color: rgb(223, 223, 223);
 	transform: scale(1);
 	vertical-align: middle;
   }
@@ -622,7 +609,7 @@ html {
 	  padding: 4px 8px;
 	  position: absolute;
 	  font-weight: 700;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	  left: 0px;
 	  right: 0px; 
 	  bottom: 0px;
@@ -803,8 +790,29 @@ html {
   }
   
   /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
+  @media only screen and (max-width: 800px) {
 	.text {
 	  font-size: 11px;
+	
 	}
+	.col-main{
+		flex-direction: column;
+	  }
+	  
+	.heroType{
+		font-size:  calc(24px + 2.5vw);;
+	
+	}
+	.body  {
+	  font-size: 24px;
+	  text-align: left;
+	  font-family: "Barlow";
+	  -webkit-text-fill-color: white;
+	  line-height: 170%;
+	  font-weight: 100;
+  }
+  .grid-container > div {
+    margin: 0px auto;
+}
+ 
   }

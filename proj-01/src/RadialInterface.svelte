@@ -1,13 +1,13 @@
 
 <script>
-	import ScifiMod01 from './scifiMod01.svelte';
-  import ScifiMod02 from './scifiMod02.svelte';
+	import ScifiMod01 from './SVGscifiMod01.svelte';
+  import ScifiMod02 from './SVGscifiMod02.svelte';
 
  
 </script>
-<section class="radial-container">
+<div class="radial-container rotating " id="four">
  
-    <ul class="health-container">
+    <ul class="health-container ">
       <li class="li-container">
       <div> <ScifiMod01 /></div>   
         </li>
@@ -32,7 +32,7 @@
           <div> <ScifiMod01 /> </div>   
       </li>
     </ul>
-    <ul class="health-container-01">
+    <ul class="health-container-01 ">
       <li class="li-container">
       <div> <ScifiMod02 /></div>   
         </li>
@@ -97,16 +97,25 @@
 </svg>
 
   </div>
-  </section> 
+</div> 
 
 
   <style>
+
+.radial-container {
+    height: 50vh;
+    width: 400px;
+    position: relative;
+    margin: auto;
+    transform: scale(0.3);
+}
   .health-container {
      display: flex;
     list-style: none;
     transition: all 0.2s ease-in;
     flex-direction: row;
     justify-content: center;
+    width:fit-content;
     align-items: center;
     height: 100%; 
     align-content: space-between;
@@ -128,6 +137,7 @@
     justify-content: center;
     align-items: center;
     height: 100%; 
+    width:fit-content;
     align-content: space-between;
     margin: auto;
     transform:scale(2.5);
@@ -377,6 +387,40 @@ li:nth-child(9) {
   transition-delay: 0.45s;
  
 }
-
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg) scale(0.5);
+    -o-transform: rotate(0deg) scale(0.5);
+    transform: rotate(0deg) scale(0.5);
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(0.5);
+    -o-transform: rotate(360deg) scale(0.5);
+    transform: rotate(360deg) scale(0.5);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg) scale(0.5);
+    -moz-transform: rotate(0deg) scale(0.5);
+    -webkit-transform: rotate(0deg) scale(0.5);
+    -o-transform: rotate(0deg) scale(0.5);
+    transform: rotate(0deg) scale(0.5);
+  }
+  to {
+    -ms-transform: rotate(360deg) scale(0.5);
+    -moz-transform: rotate(360deg) scale(0.5);
+    -webkit-transform: rotate(360deg) scale(0.5);
+    -o-transform: rotate(360deg) scale(0.5);
+    transform: rotate(360deg) scale(0.5);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 50s linear infinite;
+  -moz-animation: rotating  50s linear infinite;
+  -ms-animation: rotating 50s linear infinite;
+  -o-animation: rotating 50s linear infinite;
+  animation: rotating 50s linear infinite;
+}
 
   </style>

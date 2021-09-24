@@ -1,11 +1,33 @@
 <script>
-	import SpineUnitLeft from './SpineUnitLeft.svelte';
-    import SpineUnitRight from './SpineUnitRight.svelte';
-    import ScifiFrame from './scifiFrame.svelte';
+	import SpineUnitLeft from './SVGSpineUnitLeft.svelte';
+  import SpineUnitRight from './SVGSpineUnitRight.svelte';
+  import ScifiFrame from './SVGscifiFrame.svelte';
    
+  let visible = false;
 
-/**
- * 
+  function typewriter(node, { speed = 5 }) {
+    const valid = (
+      node.childNodes.length === 1 &&
+      node.childNodes[0].nodeType === Node.TEXT_NODE
+    );
+
+    if (!valid) {
+      throw new Error(`This transition only works on elements with a single text node child`);
+    }
+
+    const text = node.textContent;
+    const duration = text.length / (speed * 0.01);
+
+    return {
+      duration,
+      tick: t => {
+        const i = ~~(text.length * t);
+        node.textContent = text.slice(0, i);
+      }
+    };
+  }
+
+window.addEventListener("load", function () {
 // Get the container element
 var spinebtnContainer = document.getElementById("spine-controller");
 
@@ -21,15 +43,17 @@ for (var i = 0; i < btnSpine.length; i++) {
   });
 }
 
-var slideIndex = 0;
-showSlides();
+});
 
-function showSlides(ele) {
-  var i;
- 
+var slideIndex = 0;
+
+
+
+export function showSlides() {
+  var i; 
   //console.log('area element id = ' + id);
 
-  var imageNumber = ele.getAttribute("data-image-number");
+  var imageNumber = this.getAttribute("data-image-number");
   //alert("The " + ele.innerHTML + " is a " + imageNumber + ".");
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
@@ -42,8 +66,8 @@ function showSlides(ele) {
   slides[imageNumber - 1].style.display = "block";
  
  
-}
-*/
+} 
+ 
 </script>
 <section class="section-03" id="three">
   
@@ -53,11 +77,18 @@ function showSlides(ele) {
     <div class="top-left-el">
       <div class="title"> Portfolio </div>
       <div class="sub-title">27-21012-2421</div>
+    
     </div>
 
     <div class="el-01">
       <div class="ripple"></div>
-      <div class="connecting-01"> connecting... </div>
+      {#if visible}
+      <div class="connecting-01" >
+        <span in:typewriter out:typewriter>
+          connecting... 
+        </span>
+          
+       </div>{/if}
     </div>
   </div>
     <div class="slideshow-container">
@@ -149,25 +180,25 @@ function showSlides(ele) {
         </div>
       </div>
       <ul class="spine-controller-ul dot-nav">
-        <li class="spine-unit dot" onmouseover=" showSlides(this);" data-image-number="1">
+        <li class="spine-unit dot" on:mouseenter={showSlides}   data-image-number="1">
           <span>⚀</span>
         </li>
-        <li class="spine-unit dot" onmouseover=" showSlides(this);" data-image-number="2">
+        <li class="spine-unit dot"  on:mouseenter={showSlides}   data-image-number="2">
           <span>⚀</span>
         </li>
-        <li class="spine-unit dot" onmouseover=" showSlides(this);" data-image-number="3">
+        <li class="spine-unit dot" on:mouseenter={showSlides}  data-image-number="3">
           <span>⚀</span>
         </li>
-        <li class="spine-unit dot" onmouseover=" showSlides(this);" data-image-number="4">
+        <li class="spine-unit dot"  on:mouseenter={showSlides}  data-image-number="4">
           <span>⚀</span>
         </li>
-        <li class="spine-unit dot" onmouseover=" showSlides(this);" data-image-number="5">
+        <li class="spine-unit dot"  on:mouseenter={showSlides}  data-image-number="5">
           <span>⚀</span>
         </li>
-        <li class="spine-unit dot" onmouseover=" showSlides(this);" data-image-number="6">
+        <li class="spine-unit dot"  on:mouseenter={showSlides}  data-image-number="6">
           <span>⚀</span>
         </li>
-        <li class="spine-unit dot" onmouseover=" showSlides(this);" data-image-number="7">
+        <li class="spine-unit dot" on:mouseenter={showSlides}  data-image-number="7">
           <span>⚀</span>
         </li>
       </ul>
@@ -186,10 +217,20 @@ function showSlides(ele) {
     bottom:0px;
     opacity: .6;
 }
+.spine-unit{
+  transition:all 1s;
+}
+.section-03:hover .frame-container{
+  display: block;
+}
+.section-03 .frame-container{
+  display: none;
+}
 
 .frame-container:hover{
   
     opacity: .1;
 }
+ 
   
   </style>

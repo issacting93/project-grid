@@ -1,4 +1,30 @@
-<svg width="150" height="80" viewBox="0 0 611 373" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="150" height="80"   viewBox="0 0 611 373"  xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glowing Pulse Animation -->
+        <filter id="glowingPulse2">
+          <!--Blur effect-->
+          <feGaussianBlur stdDeviation="100" result="spec2">
+            <animate attributeName="stdDeviation"
+                     from="0" to="80"
+                     dur="10s"
+                     repeatCount="indefinite"
+                     values="0; 80; 80; 0;"
+                     keyTimes="0; 0.45; 0.75; 1"
+                      
+                     keySplines=".42 0 1 1;
+                                 0 0 .59 1;
+                                 .42 0 1 1;
+                                 0 0 .59 1;
+                                 .42 0 1 1;
+                                 0 0 .59 1;
+                                 .42 0 1 1;
+                                 0 0 .59 1;"/>
+          </feGaussianBlur>
+          <!--Composition of inputs-->
+          <feComposite in="SourceGraphic" in2="spec2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+        </filter>
+  </defs>
+  <g id="svgBadge"> 
   <circle cx="279.3" cy="114.5" r="5" transform="rotate(90 279.3 114.5)" stroke="#FD8235"/>
   <circle cx="248.5" cy="114.5" r="5" transform="rotate(90 248.5 114.5)" stroke="#FD8235"/>
   <circle cx="263.899" cy="114.5" r="5" transform="rotate(90 263.899 114.5)" stroke="#FD8235"/>
@@ -25,5 +51,6 @@
   <line x1="321.497" y1="99.6474" x2="261.575" y2="100.454" stroke="white"/>
   <circle cx="197.5" cy="142.5" r="7.91379" fill="white"/>
   <circle cx="197.5" cy="142.5" r="13" stroke="#FD8235"/>
-  </svg>
+</g>
+</svg>
   

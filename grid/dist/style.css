@@ -171,9 +171,7 @@ a[tabindex]:focus {
   right: 0;
   transition: all 0.3s ease-in;
 }
-
-.spine-container:hover {
-}
+ 
 
 .text-01 {
   font-size: 24px;
@@ -205,8 +203,7 @@ a[tabindex]:focus {
 }
 
 .mySlides {
-  height: 100%;
-  background: #1a1a1a;
+  height: 100%; 
 }
 
 .mySlides img {
@@ -494,6 +491,8 @@ a {
   bottom: 0px;
   padding: 20px;
   z-index: 10;
+  background: rgba(1,1,1,0.5);
+  
 }
 .menu button {
   padding: 8px;
@@ -539,7 +538,7 @@ section {
 }
 
 .section-02 {
-  background: ##1a1a1a;
+  background: #1a1a1a;
   transition: all 1s;
   position: relative;
 }

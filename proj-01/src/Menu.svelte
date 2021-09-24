@@ -1,6 +1,6 @@
 
 <script>
-/**
+ window.addEventListener("load", function () {
   // Get the container element
 var btnContainer = document.getElementById("menu");
  
@@ -15,14 +15,14 @@ var btnContainer = document.getElementById("menu");
      current[0].className = current[0].className.replace("active", "");
      this.className += " active";
    });
- }
-  */
-  
+  }
+    });
+
 </script>
 <div class="menu-container">
     <div id="menu" class="menu">
       <button class="btn active"> <a href="#one">HOME <span>◀</span> </a></button>
-      <button class="btn"> <a href="#two">ABOUT<span>◀</span> </a> </button>
+      <button class="btn"> <a href="#about">ABOUT<span>◀</span> </a> </button>
       <button class="btn"> <a href="#three">WORKS<span>◀</span> </a></button>
       <button class="btn"> <a href="#four">CONTACT<span>◀</span></a> </button>
     </div>
