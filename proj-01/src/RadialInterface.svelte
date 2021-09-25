@@ -5,7 +5,7 @@
 
  
 </script>
-<div class="radial-container rotating " id="four">
+<div class="radial-container rotating " id="two">
  
     <ul class="health-container ">
       <li class="li-container">
@@ -386,34 +386,6 @@ li:nth-child(9) {
   li:nth-child(9)  div {
   transition-delay: 0.45s;
  
-}
-@-webkit-keyframes rotating /* Safari and Chrome */ {
-  from {
-    -webkit-transform: rotate(0deg) scale(0.5);
-    -o-transform: rotate(0deg) scale(0.5);
-    transform: rotate(0deg) scale(0.5);
-  }
-  to {
-    -webkit-transform: rotate(360deg) scale(0.5);
-    -o-transform: rotate(360deg) scale(0.5);
-    transform: rotate(360deg) scale(0.5);
-  }
-}
-@keyframes rotating {
-  from {
-    -ms-transform: rotate(0deg) scale(0.5);
-    -moz-transform: rotate(0deg) scale(0.5);
-    -webkit-transform: rotate(0deg) scale(0.5);
-    -o-transform: rotate(0deg) scale(0.5);
-    transform: rotate(0deg) scale(0.5);
-  }
-  to {
-    -ms-transform: rotate(360deg) scale(0.5);
-    -moz-transform: rotate(360deg) scale(0.5);
-    -webkit-transform: rotate(360deg) scale(0.5);
-    -o-transform: rotate(360deg) scale(0.5);
-    transform: rotate(360deg) scale(0.5);
-  }
 }
 .rotating {
   -webkit-animation: rotating 50s linear infinite;

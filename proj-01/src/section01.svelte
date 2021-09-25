@@ -1,76 +1,76 @@
  <script>
 
    import Arrow from "./arrow.svelte";
-   import MouseTracking from "./3dMouseTracking.svelte";
+   import MouseTracking from "./ParallaxComponent.svelte";
+   import Blob from "./Blob.svelte";
  </script>
 
 <section class="hero-section" id="one">
-  
- <div class="hero-text-01 top"> MY NAME IS ISSAC</div>
- <div class="hero-text">
-   
-  <div class="" >if you’ll indulge me</div>
-  <div class="strong-text">I’d Like to design the Future </div>
-  <MouseTracking />
- </div>
+<div class="hero-interactive"> 
+	<h2 class="hero-text hero-text-01 top"><span> MY NAME IS ISSAC </span> </h2 >
+	<h2 class="hero-text   hero-text-02" > <span>  if you’ll indulge me </span></h2>
+	<h2 class="hero-text  hero-text-03  "> <span> I’d Like to design the Future </span>  </h2>
  
   <div class="hero-text-01 bottom"> ACCESS PORTFOLIO 
     <a href="#about"><div class="arrow">
   <Arrow/></div></a>
   </div>
+</div>
+  <MouseTracking />
  
 </section>
    
 
 <style>
  .hero-text {
-	color: white;
+	 color:white;
+} 
+.hero-interactive {
+    margin-top: 30px;
 }
-
 .hero-text {
-	padding: 40px;
-	text-align: center;
-	height: 100%;
-	vertical-align: middle;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-direction: column;
-	font-family: Barlow;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24x;
+	 
+    height: fit-content;
+    vertical-align: middle;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    z-index: 11;
+    text-transform: uppercase;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+	padding: 20px;
+    transform: translate(0, -50%);
+	letter-spacing: 0.4em;
+	font-weight: 100;
 	line-height: 36px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
 }
-
-.strong-text {
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 36px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-}
+ 
 
 .hero-text-01 {
-	color: white;
+	color:white;
 	text-align: center;
-	margin: auto;
+
 	position: absolute;
 	text-align: center;
 	left: 0px;
 	right: 0px;
-  letter-spacing: 0.4em;
-}
+	letter-spacing: 0.4em;
+	z-index: 10;
 
-.hero-text-01.top {
-	top: 10vh;
+	height: fit-content;
+    vertical-align: middle;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-family: "Barlow";
+   
 }
+  
 
 .arrow {
 	width: 54px;
@@ -84,7 +84,103 @@
 	width: fit-content;
 	bottom: 10vh;
 	align-items: center;
+	margin: auto;
+	font-weight: 100;
 }
 
 
+.hero-text-01 span,
+.hero-text-02 span,
+.hero-text-03 span {
+  width: 100%;
+  float: left;
+  font-family: "Barlow";
+  font-size:16px;
+  font-weight: 100;
+  color: #ffffff;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  transform: translateY(-50px);
+  opacity: 0;
+  animation-name: titleAnimation;
+  animation-timing-function: ease;
+  animation-duration:3s;
+}
+
+.hero-text-01 span {
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+.hero-text-01 span:first-child {
+  animation-delay: 0.7s;
+}
+.hero-text-01 span:last-child {
+ 
+  animation-delay: 0.5s;
+}
+
+.hero-text-02 {
+ 
+  font-weight: 100; 
+}
+.hero-text-02 span {
+  animation-delay: 3.1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+.hero-text-02 span:first-child {
+  animation-delay: 3.2s;
+}
+.hero-text-02 span:last-child {
+ 
+  animation-delay: 3.5s;
+}
+
+.hero-text-03 {
+   
+  position: absolute;
+  font-weight: 600;
+}
+.hero-text-03 span {
+  animation-delay: 6.1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  font-weight: 600;
+}
+.hero-text-03 span:first-child {
+  animation-delay: 6.2s;
+}
+.hero-text-03 span:last-child {
+  
+  animation-delay: 6s;
+}
+ 
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
+}
 </style>

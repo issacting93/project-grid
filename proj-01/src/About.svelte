@@ -5,6 +5,7 @@
 
 
 <section class="section-03" id="about">
+    <div class=" title"> ABOUT </div>
     <div class="about-container"> 
         <RadialInterface />
         
@@ -28,7 +29,7 @@ margin:auto;
  }
  .about-container {
     display: flex;
-    height: 50%;
+    height: 60%;
     flex-direction: column;
     align-items: center;
     justify-content: center;

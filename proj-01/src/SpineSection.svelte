@@ -70,10 +70,10 @@ export function showSlides() {
  
 </script>
 <section class="section-03" id="three">
-  
-  <div class="frame-container">  <ScifiFrame /></div>
+  <div class="title"> WORKS </div>
+  <div class="frame-container">   <ScifiFrame /></div>
   <div class="text-container">
-    
+    <!--
     <div class="top-left-el">
       <div class="title"> Portfolio </div>
       <div class="sub-title">27-21012-2421</div>
@@ -89,46 +89,46 @@ export function showSlides() {
         </span>
           
        </div>{/if}
-    </div>
+    </div>-->
   </div>
     <div class="slideshow-container">
   
       <div class="mySlides fade">
         <div class="numbertext">1 / 7</div>
-        <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+        <img src="images/Answers in a bottle.png" style="width:100%">
         <div class="text">Caption Text</div>
       </div>
   
       <div class="mySlides fade">
         <div class="numbertext">2 / 7</div>
-        <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" style="width:100%">
+        <img src="images/DARK FUTURE.png" style="width:100%">
         <div class="text">Caption Two</div>
       </div>
   
       <div class="mySlides fade">
         <div class="numbertext">3 / 7</div>
-        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+        <img src="images/LYNN.png" style="width:100%">
         <div class="text">Caption Three</div>
       </div>
   
       <div class="mySlides fade">
         <div class="numbertext">4 / 7</div>
-        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+        <img src="images/ICARUS.png" style="width:100%">
         <div class="text">Caption Three</div>
       </div>
       <div class="mySlides fade">
         <div class="numbertext">5 / 7</div>
-        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+        <img src="images/DRIFTER.png" style="width:100%">
         <div class="text">Caption Three</div>
       </div>
       <div class="mySlides fade">
         <div class="numbertext">6 / 7</div>
-        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+        <img src="images/THE DIVISION.png" style="width:100%">
         <div class="text">Caption Three</div>
       </div>
       <div class="mySlides fade">
         <div class="numbertext">7 / 7</div>
-        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+        <img src="images/SiGIL.png" style="width:100%">
         <div class="text">Caption Three</div>
       </div>
   
@@ -204,7 +204,11 @@ export function showSlides() {
       </ul>
   
     </div>
+    <!-- 
+      
     <div class="select-text"> Select Memory </div>
+
+    -->
   </section>
 
   <style>

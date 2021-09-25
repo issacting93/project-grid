@@ -21,9 +21,8 @@
 	
 	<Section01 />
 	<About/>
-	<Section02 />
 	<SpineSection />
-
+<Section02 />
 </main>
 
 <style>
