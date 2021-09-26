@@ -95,41 +95,41 @@ export function showSlides() {
   
       <div class="mySlides fade">
         <div class="numbertext">1 / 7</div>
-        <img src="images/Answers in a bottle.png" style="width:100%">
-        <div class="text">Caption Text</div>
+        <img src="images/STEALTH.png" style="width:100%" alt="Stealth game concept">
+        <div class="text"> <a href="  https://www.behance.net/gallery/112545991/Pyke-Stealth-game"> STEALTH GAME CONCEPT </a> </div>
       </div>
-  
+     
       <div class="mySlides fade">
         <div class="numbertext">2 / 7</div>
-        <img src="images/DARK FUTURE.png" style="width:100%">
-        <div class="text">Caption Two</div>
+        <img src="images/DARK FUTURE.png" style="width:100%" alt = "Dark Future">
+        <div class="text"> <a href="  https://www.behance.net/gallery/71387117/Dark-Future"> DARK FUTURE </a> </div>
       </div>
-  
+    
       <div class="mySlides fade">
         <div class="numbertext">3 / 7</div>
-        <img src="images/LYNN.png" style="width:100%">
-        <div class="text">Caption Three</div>
+        <img src="images/LYNN.png" style="width:100%" alt="lynn">
+        <div class="text"> <a href="https://zacting.itch.io/lynn"> LYNN </a> </div>
       </div>
-  
+     
       <div class="mySlides fade">
         <div class="numbertext">4 / 7</div>
-        <img src="images/ICARUS.png" style="width:100%">
-        <div class="text">Caption Three</div>
+        <img src="images/ICARUS.png" style="width:100%" alt='Icarus'>
+        <div class="text"> <a href= "https://www.behance.net/gallery/99721631/STEAMPUNK-HUD-DESIGNS"> ICARUS </a> </div>
       </div>
       <div class="mySlides fade">
         <div class="numbertext">5 / 7</div>
-        <img src="images/DRIFTER.png" style="width:100%">
-        <div class="text">Caption Three</div>
+        <img src="images/DRIFTER.png" style="width:100%" alt="drifter"> 
+        <div class="text"> <a href= "https://www.youtube.com/watch?v=yK0yUYrHmXQ"> DRIFTER </a> </div>
       </div>
       <div class="mySlides fade">
         <div class="numbertext">6 / 7</div>
-        <img src="images/THE DIVISION.png" style="width:100%">
-        <div class="text">Caption Three</div>
+        <img src="images/THE DIVISION.png" style="width:100%" alt="The Division Fan art">
+        <div class="text"> <a href="https://www.behance.net/gallery/108280961/DIVISION-III-Fan-art">The DIVISION (Fan Art) </a> </div>
       </div>
       <div class="mySlides fade">
         <div class="numbertext">7 / 7</div>
-        <img src="images/SiGIL.png" style="width:100%">
-        <div class="text">Caption Three</div>
+        <img src="images/Black Monarch.png" style="width:100%" alt="Black Monarch">
+        <div class="text"> <a href="https://www.behance.net/gallery/108694895/The-Black-Monarch">The Black Monarch </a> </div>
       </div>
   
     </div>
@@ -235,6 +235,58 @@ export function showSlides() {
   
     opacity: .1;
 }
+.text{
+  z-index: 11;
+  text-transform: capitalize;
+}
+
+.text a {
+    background: rgba(1,1,1,0.5);
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid white;
+}
+.text:hover a {
+  font-weight:600;
+  background: white;
+  color:black;
+}
  
+
+@media only screen and (max-width: 800px) {
+  #spine-controller {
+    transform: scale(0.5) translate(0px, -100px) ;
+}
+#spine-controller:hover {
+  transform: scale(0.5) translate(0px, -100px) ;
+}
+
+.spine-container:hover .spine-controller-ul li{
+  transform: scale(2) ;
+    margin-top: 75px;
+    
+}
+.text{
+   font-size: 24px;
+    position: absolute;
+    vertical-align: middle;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    display: inline-grid;
+    align-items: baseline;
+    height: auto;
+    align-content: space-evenly;
   
+}
+.text a {
+    background: rgba(1,1,1,0.5);
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid white;
+}
+}
+
   </style>

@@ -30,8 +30,8 @@
 	let showHappening = false
 </script>
 
-<main>
-	<section class="parallax"  style="--ring-size: {size}" >	
+<main class="parallax-container">
+	<section class="parallax"  style="--ring-size:{size}" >	
 		<div use:ready class='container '>
 			 
 			<!-- While all other options and parameters are optional, with sane defaults, and can be set programatically, each layer needs a data-depth attribute. The movement applied to each layer will be multiplied by its depth attribute. -->
@@ -41,7 +41,7 @@
 			 
 			</div>
 			{/each}
-	 
+	<!-- <div class="hero-image"></div> -->
 		</div>
 	</section>
  
@@ -51,12 +51,26 @@
 	:root {
   --ring-size:50vw;
 }
-	 
 
 	img{
- 
 		width:var(--ring-size);
 	} 
+	
+.hero-image {
+	border-radius: 50%;
+	background: white;
+	position: absolute;
+	right:0px;
+	left:0px;
+	top:0px;
+	bottom: 0px;
+	width:250px;
+	height:250px;
+	margin:auto;
+	z-index: 11;
+	overflow: hidden;
+	opacity: .1;
+}
 	.parallax{
 		width:100%;
 		height:100%;
@@ -64,6 +78,7 @@
 		display:grid;
 		place-items:center;
 		transition: all 1s;
+		margin-top:  100px;
 		color:white;
 	} 
 
@@ -149,6 +164,47 @@
  	-moz-animation: ring-appear  1s linear forwards;
 	
   }
+  @media screen and (max-width: 800px) {
+    :root {
+		--ring-size:100vh;
+    }
+
+	.parallax{
+		animation: fadeinout 2s;
+		margin-top:  50%;
+		color:white;
+		transform:scale(2);
+	} 
+	main.parallax-container {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  margin-top: -50%;
+}
+.hero-interactive 
+{
+	margin-top: 100%;;
+}
+	
+}
+ 
+@media screen and (min-width: 1600px) {
+    :root {
+		--ring-size:100vh;
+    }
+
+	.parallax{
+		animation: fadeinout 2s;
+		margin-top:-10vw;
+		color:white;
+		opacity:.3;
+		transform:scale(0.6);
+	} 
+	
+}
+
+
   
 @keyframes hero-ring-appear {
   from {
@@ -156,7 +212,7 @@
 	-webkit-transform: rotate(0deg) scale(.75);
 	  -o-transform: rotate(0deg) scale(.75);
 	  transform: rotate(0deg) scale(.75);
- 
+	  opacity:.5;
   } 
   20% {
     transform: rotate( -160deg)  scale(.55);
@@ -175,13 +231,14 @@
   }
  95% {
     transform: rotate( -160deg) scale( .85);
-  opacity:0.1;
+  opacity:0.6;
   }
  to {
  
 	-webkit-transform: rotate(360deg) scale(.75);
 	  -o-transform: rotate(360deg) scale(.75);
 	  transform: rotate(360deg) scale(.75);
+	  opacity:.5;
   } 
 }
 @keyframes ring-appear {
@@ -190,11 +247,11 @@
 	-webkit-transform: rotate(0deg) scale(0.5);
 	  -o-transform: rotate(0deg) scale(0.5);
 	  transform: rotate(0deg) scale(0.5);
-	  opacity:0;
+	  opacity:.3;
   } 
   20% {
     transform: rotate( -160deg)  scale(.55);
-	opacity: 0;
+	opacity: .3;
   
   }  30% {
     transform: rotate( -260deg) scale(.2);
@@ -213,7 +270,7 @@
 	-webkit-transform: rotate(360deg) scale(0.5);
 	  -o-transform: rotate(360deg) scale(0.5);
 	  transform: rotate(360deg) scale(0.5);
-	  opacity: 0;
+	  opacity: .3;
   } 
 }
 </style>

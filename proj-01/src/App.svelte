@@ -20,8 +20,9 @@
 	<Menu />
 	
 	<Section01 />
-	<About/>
 	<SpineSection />
+	<About/>
+
 <Section02 />
 </main>
 

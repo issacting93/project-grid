@@ -3,7 +3,11 @@ html {
 	background: black;
 	
   }
-  
+  body{
+	font-family: "Barlow";
+	font-size:16px;
+	font-weight: 100;
+  }
   canvas {
 	margin: auto;
     width: auto;
@@ -25,6 +29,26 @@ html {
     RIGHT: 0PX;
     BOTTOM: 0PX;
 }
+
+	.fade-in {
+		animation: fadein 2s;
+	}
+
+	@keyframes fadein {
+		from { opacity: 0; }
+		to   { opacity: 1; }
+	}
+	
+	.fade-in {
+		animation: fadein 2s;
+	}
+
+	@keyframes fadeinout {
+		0% { opacity: 0; }
+		70%   { opacity: 1; }
+		100% { opacity: 0; }
+	}
+	
   
   .grid-container {
 	display: flex;
@@ -101,10 +125,8 @@ html {
   }
   
   .menu button:hover {
-	background-color: black;
-	padding: 8px;
-	-webkit-text-stroke-color: white;
-	-webkit-text-fill-color: white;
+	background-color: #090909;
+	padding: 8px; 
   }
   
   /* Style the active class, and buttons on mouse-over */
@@ -488,7 +510,7 @@ html {
 	width: 100%;
 	bottom: 0px;
 	padding: 20px;
-	z-index: 10;
+	z-index: 20;
 	background: rgba(1,1,1,0.5);
 	
   }
@@ -501,12 +523,7 @@ html {
   .menu span {
 	display: none;
   }
-  .menu button:hover {
-	background-color: white ;
-	padding: 8px;
-	-webkit-text-stroke-color: white;
-	-webkit-text-fill-color: white;
-  }
+  
   #gallery {
 	width: 100%;
 	height: 100%;
@@ -833,6 +850,20 @@ html {
   }
   .grid-container > div {
     margin: 0px auto;
+}
+
+.terrain-container svg {
+    opacity: .4;
+    position: absolute;
+    top: 0px;
+    transform: scale(4.5);
+}
+.unit-list-top{
+	margin-top: 0px;
+}
+
+.unit-list-bottom {
+	margin-bottom: 0px;
 }
  
   }

@@ -12,7 +12,7 @@
 	<h2 class="hero-text  hero-text-03  "> <span> I’d Like to design the Future </span>  </h2>
  
   <div class="hero-text-01 bottom"> ACCESS PORTFOLIO 
-    <a href="#about"><div class="arrow">
+    <a href="#three"><div class="arrow">
   <Arrow/></div></a>
   </div>
 </div>
@@ -86,6 +86,9 @@
 	align-items: center;
 	margin: auto;
 	font-weight: 100;
+  opacity:0;
+  animation: fadein 3s ease-in forwards;
+  animation-delay: 3s;
 }
 
 
@@ -133,7 +136,6 @@
   animation-delay: 3.2s;
 }
 .hero-text-02 span:last-child {
- 
   animation-delay: 3.5s;
 }
 
@@ -155,7 +157,13 @@
   
   animation-delay: 6s;
 }
- 
+@media screen and (max-width: 800px) {
+
+  .hero-text-01.bottom{
+    margin-bottom: 30%;
+    animation-delay: 1s;
+}
+}
 
 @keyframes titleAnimation {
   0% {

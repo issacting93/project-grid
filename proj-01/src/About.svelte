@@ -12,7 +12,10 @@
 
     
            
-<div class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel varius orci, ut laoreet mi. Integer congue convallis odio, non sollicitudin tellus elementum non. Sed vitae sapien facilisis, bibendum magna ac, porttitor nisl. Curabitur sem neque, sodales consectetur elit in, suscipit convallis ex. Ut id facilisis mauris. Morbi luctus nunc sed eros porttitor laoreet. Suspendisse vel neque vitae ligula mollis iaculis. Donec ac nisl quam.</div>
+<div class="about-text">I grew up with a deep love for science fiction. I believe that our capacity to dream of a future together has helped drive our development as a species.
+    <br>
+    As such, I am deeply passionate about designing for things both in the near and far future by boldly going into new technologies. I love to explore the space between design and technology. 
+</div>
 </div> 
 </section>
  
@@ -33,6 +36,7 @@ margin:auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: -100px;
 }
 section.section-03 {
     display: flex;
@@ -40,5 +44,24 @@ section.section-03 {
     align-items: center;
     font-family: "Barlow";
 font-style: normal;
+}
+
+@media only screen and (max-width: 800px) {
+    .about-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+    padding: 20px;
+} 
+
+.about-text  {
+  
+    color: white;
+    margin: auto;
+    width: calc(100% - 40px );
+}
 }
 </style>

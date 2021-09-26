@@ -68,7 +68,7 @@
   </div>
   <div class="ring-02">
     <svg width="100%" height="100%" viewBox="0 0 399 366" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="199.267" cy="183" r="177.5" stroke="white" stroke-width="11"/>
+      <circle cx="199.267" cy="183" r="177.5" stroke="white" stroke-width="2"/>
       <circle cx="8.13333" cy="357.867" r="6.13333" fill="#C4C4C4" stroke="white" stroke-width="4"/>
       <circle cx="390.4" cy="357.867" r="6.13333" fill="#C4C4C4" stroke="white" stroke-width="4"/>
       <circle cx="8.13333" cy="8.13333" r="6.13333" fill="#C4C4C4" stroke="white" stroke-width="4"/>
@@ -93,7 +93,7 @@
 <circle cx="271.5" cy="140.5" r="8" stroke="white" stroke-opacity="0.7"/>
 <circle cx="140" cy="9" r="8" transform="rotate(90 140 9)" stroke="white" stroke-opacity="0.7"/>
 <circle cx="140" cy="272" r="8" transform="rotate(90 140 272)" stroke="white" stroke-opacity="0.7"/>
-<circle cx="140" cy="140" r="97.9" stroke="#FD8235" stroke-width="0.2"/>
+<circle cx="140" cy="140" r="97.9" stroke="#FD8235" stroke-width="1"/>
 </svg>
 
   </div>
@@ -189,11 +189,11 @@
     left: 0px;
     right: 0px;
     width: 120px;
-    transform:scale(0.25) rotate(0deg);
+    transform:scale(2.25) rotate(0deg);
 }
 
 .radial-container:hover .ring-02 {
-  transform:scale(1) rotate(45deg);
+  transform:scale(1.5) rotate(45deg);
   transition-delay:0.2s;
 }
 
@@ -240,7 +240,7 @@
     left: 0px;
     right: 0px;
     width: 120px;
-    transform:scale(1.15) rotate(0deg);
+    transform:scale(3.15) rotate(0deg);
 }
 
 .radial-container:hover .ring-04 {
@@ -253,14 +253,14 @@
  }
 
 .radial-container:hover li div {
-  transform:   rotate3d(0, -1, 0,  35deg) scale(0.6);
+  transform:   rotate(35deg) scale(0.6);
   transition: all 0.2s ease-in;
   transform-origin: 0 0;
    
   transform: matrix(-0.84, 0.66, 0.47, 0.82, 0, 0);
 }
 .radial-container:active li div {
-  transform:   rotate3d(0, -1, 0,  135deg);
+  transform:   rotate(135deg);
   transition: all 0.2s ease-in;
   transform-origin: 0 0; 
   transform: matrix(-0.84, 0.66, 0.47, 0.82, 0, 0);
@@ -393,6 +393,13 @@ li:nth-child(9) {
   -ms-animation: rotating 50s linear infinite;
   -o-animation: rotating 50s linear infinite;
   animation: rotating 50s linear infinite;
+}
+
+
+@media screen and (max-width: 800px) {
+.radial-container{
+    margin-top: 130px;
+}
 }
 
   </style>

@@ -18,14 +18,17 @@
     </ul>
     <div class="terrain-container" >
    <div class="marker-01"> 
- <a href="www.google.com"> <MapIndicator /></a> 
-   Behance  
+ <a href="https://www.behance.net/zacting" target="_blank"> <MapIndicator />
+   Behance  </a> 
    </div>  
    <div class="marker-02"> 
-    <MapIndicator />
+    <a href=" https://www.instagram.com/izacting/" target="_blank"> <MapIndicator />
+    Instagram</a> 
    </div>  
    <div class="marker-03"> 
-    <MapIndicator />
+    <a href=" https://www.linkedin.com/in/issac-ting-b489a98b/" target="_blank"> <MapIndicator />
+    LinkedIn
+  </a> 
    </div>  
       <Terrain />
       <GridComponent />
@@ -48,7 +51,7 @@
 
 .section-02  .terrain-container{
     
-   
+   display:none;
       transition: all 1s;
       max-width: 1200px;
     }
@@ -57,24 +60,47 @@
       opacity: 1;
     }
 
-    .marker-01 {
-    top: 50vh;
-    left: 20vw;
+.marker-01 {
+    top: 50vh; 
+    left:0;
+    right: 0;
     position: absolute;
     color: white;
     margin: 10px  auto;
+    width: 100%;
+    z-index: 11;
+    display:flex;
+    width: auto;
+    animation: fadein .2s ease-in forwards;
+    animation-delay: 0.3s;
+   
+    transform: translate(60%, 10px);
 }
 
 .marker-02 {
     top: 40vh;
-    left:50vw;
+    color: white;
+    left:0;
+    right: 0;
     position: absolute;
+    transform: translate(20%, 50px);
+    z-index: 11;
+    opacity: 0;
+    animation: fadein .2s ease-in forwards;
+    animation-delay:1.3s;
 }
 
 .marker-03 {
     top: 65vh;
-    left:60vw;
+    left:0;
+    color: white;
+    right: 0;
     position: absolute;
+    transform: translate(50%, 10%);
+    z-index: 11;
+    opacity: 0;
+    animation: fadein .2s ease-in forwards;
+    animation-delay:0.9s;
 }
       .terrain-container {
           height: 100vh;
