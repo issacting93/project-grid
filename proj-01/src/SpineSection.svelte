@@ -44,7 +44,9 @@ for (var i = 0; i < btnSpine.length; i++) {
 }
 
 });
-
+/**
+ * 
+ * 
 var slideIndex = 0;
 
 
@@ -67,7 +69,50 @@ export function showSlides() {
  
  
 } 
- 
+ */
+const projects = [
+    {
+      no: '1',
+      id: 'stealth',
+      name: 'Stealth Game Concept',
+      image: '/images/STEALTH.png'
+    },
+    { no: '2',
+      id: 'dark-future',
+      name: 'Dark Future',
+      image: 'https://proj-ash.vercel.app/images/DARK FUTURE.png'
+    },
+    { no: '3',
+      id: 'lynn',
+      name: 'lynn',
+      image: 'https://proj-ash.vercel.app/images/LYNN.png'
+    },
+    { no: '4',
+      id: 'icarus',
+      name: 'ICARUS',
+      image: 'https://proj-ash.vercel.app/images/ICARUS.png'
+    },
+    { no: '5',
+      id: 'division',
+      name: 'Division',
+      image: 'https://proj-ash.vercel.app/images/THE DIVISION.png'
+    },
+    { no: '6',
+      id: 'drifter',
+      name: 'Drifter',
+      image: 'https://proj-ash.vercel.app/images/DRIFTER.png'
+    },
+    { no: '7',
+      id: 'blackmonarch',
+      name: 'Black Monarch ',
+      image: 'https://proj-ash.vercel.app/images/Black Monarch.png'
+    }
+  ];
+
+  let selectedProject = 0
+  ;
+
+  
 </script>
 <section class="section-03" id="three">
   <div class="title"> WORKS </div>
@@ -93,13 +138,15 @@ export function showSlides() {
   </div>
     <div class="slideshow-container">
   
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 7</div>
-        <img src="images/STEALTH.png" style="width:100%" alt="Stealth game concept">
-        <div class="text"> <a href="  https://www.behance.net/gallery/112545991/Pyke-Stealth-game"> STEALTH GAME CONCEPT </a> </div>
+      <div class="mySlides ">
+        <div class="numbertext">{projects[selectedProject].no } / 7</div>
+        <img   
+        src={projects[selectedProject].image}
+        alt={projects[selectedProject].name}
+         style="width:100%" >
+        <div class="text"> <a href="  https://www.behance.net/gallery/112545991/Pyke-Stealth-game"> {projects[selectedProject].name} </a> </div>
       </div>
-     
-      <div class="mySlides fade">
+     <!--  <div class="mySlides fade">
         <div class="numbertext">2 / 7</div>
         <img src="images/DARK FUTURE.png" style="width:100%" alt = "Dark Future">
         <div class="text"> <a href="  https://www.behance.net/gallery/71387117/Dark-Future"> DARK FUTURE </a> </div>
@@ -130,7 +177,8 @@ export function showSlides() {
         <div class="numbertext">7 / 7</div>
         <img src="images/Black Monarch.png" style="width:100%" alt="Black Monarch">
         <div class="text"> <a href="https://www.behance.net/gallery/108694895/The-Black-Monarch">The Black Monarch </a> </div>
-      </div>
+      </div>-->
+    
   
     </div>
     <div class="spine-container" id="spine-controller">
@@ -180,7 +228,17 @@ export function showSlides() {
         </div>
       </div>
       <ul class="spine-controller-ul dot-nav">
-        <li class="spine-unit dot" on:mouseenter={showSlides}   data-image-number="1">
+        {#each projects as project, index}
+        <li class="spine-unit dot" 
+          on:mouseover={() => (selectedProject = index)}
+          on:focus={() => (selectedProject = index)}
+        >
+        <span>⚀  <!--  {index + 1} --> </span>    
+        </li>
+      {/each}
+
+      <!-- 
+     <li class="spine-unit dot" on:mouseenter={showSlides}   data-image-number="1">
           <span>⚀</span>
         </li>
         <li class="spine-unit dot"  on:mouseenter={showSlides}   data-image-number="2">
@@ -189,6 +247,9 @@ export function showSlides() {
         <li class="spine-unit dot" on:mouseenter={showSlides}  data-image-number="3">
           <span>⚀</span>
         </li>
+
+ 
+   
         <li class="spine-unit dot"  on:mouseenter={showSlides}  data-image-number="4">
           <span>⚀</span>
         </li>
@@ -201,6 +262,7 @@ export function showSlides() {
         <li class="spine-unit dot" on:mouseenter={showSlides}  data-image-number="7">
           <span>⚀</span>
         </li>
+             -->
       </ul>
   
     </div>
